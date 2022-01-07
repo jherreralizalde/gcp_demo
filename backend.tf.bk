@@ -1,0 +1,6 @@
+terraform {
+  backend "gcs" {
+    export GOOGLE_APPLICATION_CREDENTIALS="/home/jose/gcp_demo/enviroment/gcp_demo/miprimerproyecto-333317-2dbfbfdd39ea.json"  
+    bucket = "gcp_demo"
+  }
+}
