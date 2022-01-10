@@ -29,6 +29,7 @@ resource "google_compute_subnetwork" "new_subnetwork" {
 }
 
 resource "google_compute_firewall" "demo_fw" {
+  project       = "projecto-demo-337817"
   name    = "demo-firewall"
   network = google_compute_network.vpc_network.name
   allow {
@@ -43,6 +44,7 @@ resource "google_compute_firewall" "demo_fw" {
 }
 
 resource "google_compute_instance" "vm_instance" {
+  project       = "projecto-demo-337817"
   name         = "demo-instance-ubuntu"
   machine_type = "e2-standard-2"
   zone         = "us-central1-a"
