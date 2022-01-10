@@ -1,20 +1,20 @@
 resource "google_service_account" "default" {
-  project      = "miprimerproyecto-333317"
+  project      = "projecto-demo-337817"
   account_id   = "service-account-id"
   display_name = "Service Account"
 }
 resource "google_project_iam_member" "project" {
-  project = "miprimerproyecto-333317"
+  project = "projecto-demo-337817"
   role    = "roles/editor"
   member  = "serviceAccount:${google_service_account.default.email}"
 }
 resource "google_compute_network" "vpc_network" {
-  project                 = "miprimerproyecto-333317"
+  project                 = "projecto-demo-337817"
   name                    = "new-network"
   auto_create_subnetworks = false
 }
 resource "google_compute_subnetwork" "new_subnetwork" {
-  project       = "miprimerproyecto-333317"
+  project       = "projecto-demo-337817"
   name          = "new-network-subnetwork"
   ip_cidr_range = "10.0.1.0/24"
   region        = "us-central1"
