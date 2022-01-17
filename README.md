@@ -5,27 +5,27 @@ The goal for that part of the demo its capture Pub/Sub messajes ant keep it in a
 
 # Pre requisites
 
--Enable the necesary GCP APIs
--Service account with the necesary privileges
--Terraform
--Github repo
+- Enable the necesary GCP APIs
+- Service account with the necesary privileges
+- Terraform
+- Github repo
 
 # Terraform config
 
 To create the infra necesary for that task, that files will be used:
 
--auth.tf
--backend.tf
--provider.tf
--versions.tf
--instance.tf
--pub-sub.tf
--startup.sh
+- auth.tf
+- backend.tf
+- provider.tf
+- versions.tf
+- instance.tf
+- pub-sub.tf
+- startup.sh
 
 Aditional that files will usesd for security and Jenkins code:
 
--.gitignore
--Jenkinsfile
+- .gitignore
+- Jenkinsfile
 
 To capture the Pub/Sub message i decided to use one file and add every 5 minutes a new message on it:
 
